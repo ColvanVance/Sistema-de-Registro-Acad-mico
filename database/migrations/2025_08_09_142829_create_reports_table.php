@@ -22,8 +22,11 @@ return new class extends Migration
             $table->string('Generated_By');
             $table->string('Status', 15);
 
-            $table->foreign('employee_id')->references('id')->
-            on('employee')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('employees_id')->references('id')->
+            on('employees')->onDelete('cascade')->onUpdate('cascade');
+
+            $table->foreign('departament_id')->references('id')->
+            on('departament')->onDelete('cascade')->onUpdate('cascade');
 
             $table->timestamps();
         });
