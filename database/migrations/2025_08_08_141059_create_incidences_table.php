@@ -23,11 +23,17 @@ return new class extends Migration
             $table->foreign('charges_id')->references('id')->
             on('charges')->onDelete('cascade')->onUpdate('cascade');
 
-            $table->date('creation_date');
-            $table->string('type');
-            $table->string('');
-            $table->string('');
-            $table->string('');
+            $table->string('type', 80);
+            $table->string('reportin', 30);
+            $table->text('reasson', 500);
+            $table->string('penalty', 100);
+            $table->string('generated_by', 50);
+            $table->string('status', 15);
+
+
+            $table->foreign('bosses_id')->references('id')->
+            on('bosses')->onDelete('cascade')->onUpdate('cascade');
+
             $table->timestamps();
         });
     }

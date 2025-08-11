@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('departaments', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('Name_departament');
-            $table->string('Location', 50);
-            $table->string('Responsible_employee');
-            $table->string('State', 30);
-            $table->integer('Capacity_staff');
+            $table->string('name_departament');
+            $table->string('location', 50);
+            $table->string('responsible_employee');
+            $table->string('state', 30);
+            $table->integer('capacity_staff');
 
             $table->foreign('employees_id')->references('id')->
             on('employees')->onDelete('cascade')->onUpdate('cascade');

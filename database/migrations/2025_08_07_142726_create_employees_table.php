@@ -13,22 +13,22 @@ return new class extends Migration
     {
         Schema::create('employees', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('First_name');
-            $table->string('Last_name');
-            $table->string('Educative_level');
-            $table->string('Identification', 16)->unique();
-            $table->string('Number_phone', 9)->unique();
-            $table->string('Mail')->unique();
-            $table->string('Nacionality', 60);
-            $table->date('Years_old', 2);
-            $table->string('Gender', 10);
-            $table->string('Marital_states', 12);
-            $table->text('Adress');
-            $table->string('Emergency_contact_phone', 16);
-            $table->string('Emergency_contact_name');
-            $table->date('Hire_date');
-            $table->string('Position', 30);
-            $table->string('Departament', 50);
+            $table->string('name');
+            $table->string('last_name');
+            $table->string('years_old');
+            $table->string('gender', 16)->unique();
+            $table->string('civil_status', 12);
+            $table->string('number_phone', 9)->unique();
+            $table->string('emergency_contact_phone', 16);
+            $table->string('emergency_contact_name');
+            $table->string('mail')->unique();
+            $table->string('nacionality', 60);
+            $table->date('educative_level', 2);
+            $table->string('identification', 10);
+            $table->text('adress');
+            $table->date('hire_date');
+            $table->string('position', 30);
+            $table->string('departament', 50);
 
             $table->timestamps();
         });

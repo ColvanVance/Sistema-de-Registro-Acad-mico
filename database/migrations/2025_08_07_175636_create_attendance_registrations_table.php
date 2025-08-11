@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('attendance_registrations', function (Blueprint $table) {
             $table->increments('id');
-            $table->dateTime('Creation_date');
-            $table->time('Time_in');
-            $table->time('Time_exit');
-            $table->time('Hours_worked');
-            $table->time('Overtime');
+            $table->dateTime('creation_date');
+            $table->time('time_in');
+            $table->time('time_exit');
+            $table->time('hours_worked');
+            $table->time('overtime');
 
             $table->foreign('employees_id')->references('id')->
             on('employees')->onDelete('cascade')->onUpdate('cascade');

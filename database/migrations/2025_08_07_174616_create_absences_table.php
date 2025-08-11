@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('absences', function (Blueprint $table) {
             $table->increments('id');
-            $table->date('Date_in');
-            $table->date('Date_end');
-            $table->string('Type', 80);
-            $table->text('Reasson');
-            $table->string('Status', 15);
+            $table->date('date_in');
+            $table->date('date_end');
+            $table->string('type', 80);
+            $table->text('reasson');
+            $table->string('status', 15);
 
             $table->foreign('employees_id')->references('id')->
             on('employees')->onDelete('cascade')->onUpdate('cascade');

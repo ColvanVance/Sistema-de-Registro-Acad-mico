@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('horaries', function (Blueprint $table) {
             $table->increments('id');
-            $table->Time('Expected_input');
-            $table->Time('Expected_exit');
-            $table->time('Overtime');
+            $table->Time('expected_input');
+            $table->Time('expected_exit');
+            $table->time('overtime');
 
             $table->foreign('employees_id')->references('id')->
             on('employees')->onDelete('cascade')->onUpdate('cascade');
