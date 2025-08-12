@@ -9,9 +9,11 @@ class charge extends Model
     protected $table = 'charges';
 
     protected $fillable = [
-        'Name_charge',
-        'Description',
-        'State',
+        'name_charge',
+        'type_charge',
+        'academic_level',
+        'experience_works',
+        'requeriments',
     ];
 
     public function departament()
@@ -19,7 +21,7 @@ class charge extends Model
         return $this->hasMany(Departament::class);
     }
 
-    public function attendance_registration()
+    public function attendance_registrations()
     {
         return $this->hasMany(Attendance_registration::class);
     }

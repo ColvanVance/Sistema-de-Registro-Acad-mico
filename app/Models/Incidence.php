@@ -3,9 +3,6 @@
 namespace App\Models\Incidence;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Employee\Employee;
-use App\Models\Departament\Departament;
-use App\Models\Boss\Boss;
 
 class incidences extends Model
 {
@@ -13,13 +10,14 @@ class incidences extends Model
 
     protected $fillable = [
         'employees_id',
-        'departament_id',
+        'departaments_id',
         'charges_id',
         'creation_date',
         'type',
         'reasson',
         'penalty',
         'mediation',
+        'generated_by',
         'status',
         'bosses_id',
     ];

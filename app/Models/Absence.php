@@ -2,9 +2,6 @@
 
 namespace App\Models\Absences;
 
-use App\Models\Boss\Boss;
-use App\Models\Departament\Departament;
-use App\Models\Employees\Employee;
 use Illuminate\Database\Eloquent\Model;
 
 class Absence extends Model

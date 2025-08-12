@@ -15,18 +15,16 @@ return new class extends Migration
             $table->increments('id');
             $table->string('name_chargues', 100);
             $table->string('type_charges', 40);
-            $table->string('specific_qualification', 80);
+            $table->string('academic_level', 80);
             $table->text('experience_work');
             $table->text('requeriments');
 
             $table->foreign('employees_id')->references('id')->
             on('employees')->onDelete('cascade')->onUpdate('cascade');
 
-            $table->foreign('departaments_id')->references('id')->
-            on('departaments')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('attendance_registrations_id')->references('id')->
+            on('attendance_registration')->onDelete('cascade')->onUpdate('cascade');
 
-            $table->foreign('horaries_id')->references('id')->
-            on('horaries')->onDelete('cascade')->onUpdate('id');
 
             /**
              * Incluir boton para ingresar pdf

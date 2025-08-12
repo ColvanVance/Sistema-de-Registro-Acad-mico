@@ -24,10 +24,10 @@ return new class extends Migration
             on('charges')->onDelete('cascade')->onUpdate('cascade');
 
             $table->string('type', 80);
-            $table->string('reportin', 30);
             $table->text('reasson', 500);
-            $table->string('penalty', 100);
-            $table->string('generated_by', 50);
+            $table->string('penalty', 255);
+            $table->string('mediation', 100);
+            $table->string('generated_by', 100);
             $table->string('status', 15);
 
 

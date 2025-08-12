@@ -11,6 +11,7 @@ class Departament extends Model
     protected $fillable = [
         'name_departament',
         'location',
+        'description',
         'responsible_employee',
         'state',
         'capacity_staff',
