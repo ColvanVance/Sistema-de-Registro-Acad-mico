@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Models\Incidence;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class incidences extends Model
+class incidence extends Model
 {
     protected $table = 'incidences';
 

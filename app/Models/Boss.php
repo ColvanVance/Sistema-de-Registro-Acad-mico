@@ -1,8 +1,7 @@
 <?php
 
-namespace App\Models\Boss;
+namespace App\Models;
 
-use App\Models\Absences\Absence;
 use Illuminate\Database\Eloquent\Model;
 
 class Boss extends Model

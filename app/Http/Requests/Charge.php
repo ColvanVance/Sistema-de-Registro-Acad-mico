@@ -12,7 +12,7 @@ class Charge extends FormRequest
      */
     public function authorize(): bool
     {
-        return ture;
+        return true;
     }
 
     /**
