@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Departament;
 use App\Models\Employee;
-use Illuminate\Http\DepartamentRequest;
+use App\Http\Requests\DepartamentRequest;
 
 class DepartamentController extends Controller
 {
@@ -48,7 +48,7 @@ class DepartamentController extends Controller
     {
         $departaments = Departament::find($id);
 
-        return view('departaments.show', compact('departament'));
+        return view('departaments.show', compact('departaments'));
     }
 
     /**
@@ -68,8 +68,8 @@ class DepartamentController extends Controller
      */
     public function update(DepartamentRequest $request, int $id)
     {
-        $departament = Departament::find($id);
-        $departament->update($request->validated());
+        $departaments = Departament::find($id);
+        $departaments->update($request->validated());
 
         return redirect()->route('departaments.index')
             ->with('updated', 'Departamento actualizado con exito.');
