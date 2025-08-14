@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Departament;
 use App\Models\Employee;
+use App\Models\Boss;
 use App\Http\Requests\DepartamentRequest;
 
 class DepartamentController extends Controller
@@ -26,8 +27,8 @@ class DepartamentController extends Controller
         $departament = new Departament();
 
         $employees = Employee::all();
-         // Assuming you want to pass employees to the view
-        return view('departaments.create', compact('departament', 'employees'));
+        $bosses = Boss::all();
+        return view('departaments.create', compact('departament', 'employees', 'bosses'));
     }
 
     /**
@@ -59,8 +60,8 @@ class DepartamentController extends Controller
         $departaments = Departament::find($id);
 
         $employees = Employee::all();
-        // Assuming you want to pass employees to the view
-        return view('departaments.edit', compact('departaments', 'employees'));
+        $bosses = Boss::all();
+        return view('departaments.edit', compact('departaments', 'employees', 'bosses'));
     }
 
     /**
