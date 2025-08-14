@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Employee;
-use Illuminate\Http\Request;
+use App\Http\Requests\EmployeeRequest;
 
 class EmployeeController extends Controller
 {
@@ -37,7 +37,7 @@ class EmployeeController extends Controller
         Employee::create($request->validated());
 
         return redirect()->route('employees.index')
-            ->with('success', 'Employee creado con exito.');
+            ->with('success', 'Trabajador creado con exito.');
     }
 
     /**
@@ -69,7 +69,7 @@ class EmployeeController extends Controller
         $employees->update($request->validated());
 
         return redirect()->route('employees.index')
-            ->with('updated', 'Employee actualizado con exito');
+            ->with('updated', 'Trabajador actualizado con exito');
     }
 
     /**
@@ -81,6 +81,6 @@ class EmployeeController extends Controller
         $employees->delete();
 
         return redirect()->route('employees.index')
-            ->with('deleted', 'Employee eliminado con exito');
+            ->with('deleted', 'Trabajador eliminado con exito');
     }
 }
