@@ -5,7 +5,7 @@ namespace App\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
-class Boss extends FormRequest
+class BossRequest extends FormRequest
 {
     /**
      * Determiná si el usuario está autorizado para realizar esta solicitud.
