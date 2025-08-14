@@ -28,6 +28,7 @@ class DepartamentController extends Controller
 
         $employees = Employee::all();
         $bosses = Boss::all();
+
         return view('departaments.create', compact('departament', 'employees', 'bosses'));
     }
 
