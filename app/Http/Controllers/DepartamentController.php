@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Departament;
 use App\Models\Employee;
 use App\Models\Boss;
+use App\Models\Attendance_registration;
 use App\Http\Requests\DepartamentRequest;
 
 class DepartamentController extends Controller
@@ -28,8 +29,9 @@ class DepartamentController extends Controller
 
         $employees = Employee::all();
         $bosses = Boss::all();
+        $attendance_registrations = Attendance_registration::all();
 
-        return view('departaments.create', compact('departament', 'employees', 'bosses'));
+        return view('departaments.create', compact('departament', 'employees', 'bosses', 'attendance_registrations'));
     }
 
     /**
@@ -62,7 +64,9 @@ class DepartamentController extends Controller
 
         $employees = Employee::all();
         $bosses = Boss::all();
-        return view('departaments.edit', compact('departaments', 'employees', 'bosses'));
+        $attendance_registrations = Attendance_registration::all();
+
+        return view('departaments.edit', compact('departaments', 'employees', 'bosses', 'attendance_registrations'));
     }
 
     /**

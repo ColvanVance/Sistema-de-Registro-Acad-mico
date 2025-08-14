@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Attendance_registrarion;
+use App\Models\Attendance_registration;
+use App\Models\Absence;
 use App\Models\Charge;
+use App\Models\Incidence;
 use App\Http\Requests\Attendance_registrationRequest;
 
 class Attendance_registrationController extends Controller
