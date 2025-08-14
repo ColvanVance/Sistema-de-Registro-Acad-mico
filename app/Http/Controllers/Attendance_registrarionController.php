@@ -28,8 +28,9 @@ class Attendance_registrationController extends Controller
         $attendance_registrarions = new Attendance_registration();
 
         $charges = Charge::all();
+        $absences = Absence::all();
 
-        return view('attendance_registrarions.create', compact('attendance_registrarions', 'charges'));
+        return view('attendance_registrarions.create', compact('attendance_registrarions', 'charges', 'absences'));
     }
 
     /**
@@ -61,8 +62,9 @@ class Attendance_registrationController extends Controller
         $attendance_registrarions = Attendance_registration::find($id);
 
         $charges = Charge::all();
+        $absences = Absence::all();
 
-        return view('attendance_registrarions.edit', compact('attendance_registrarions', 'charges'));
+        return view('attendance_registrarions.edit', compact('attendance_registrarions', 'charges', 'absences'));
     }
 
     /**
