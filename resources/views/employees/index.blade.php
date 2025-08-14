@@ -32,7 +32,7 @@
                                 <th scope="col">Nivel educativo</th>
                                 <th scope="col">Cedula de identificación</th>
                                 <th scope="col">Dirección</th>
-                                <th scope="col">Fecha de contratacion</th>
+                                <th scope="col">Fecha de contratacion en la empresa</th>
                                 <th scope="col">Cargo</th>
                                 <th scope="col">Departamento</th>
                             </tr>

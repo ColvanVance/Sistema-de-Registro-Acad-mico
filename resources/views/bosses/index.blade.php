@@ -8,9 +8,9 @@
 
                 <div class="card-header border-0">
                     <div class="d-flex justify-content-between algn-items-center">
-                        <h3 class="mb-0">Empleados</h3>
-                        <a href="{{ route('employees.create') }}" class="btn btn-primary">
-                            <i class="fas fa-plus"></i> Crear nuevo Empleado
+                        <h3 class="mb-0">Jefes</h3>
+                        <a href="{{ route('bosses.create') }}" class="btn btn-primary">
+                            <i class="fas fa-plus"></i> Crear nuevo Jefe
                         </a>
                     </div>
                 </div>
@@ -21,30 +21,30 @@
                             <tr>
                                 <th scope="col">Nombre</th>
                                 <th scope="col">Apellido</th>
-                                <th scope="col">Fecha de cumpleaños</th>
+                                <th scope="col">Cedula de identificación</th>
+                                <th scope="col">Número telefonico</th>
+                                <th scope="col">Correo electronico</th>
+                                <th scope="col">Nacionalidad</th>
+                                <th scope="col">Fecha de nacimiento</th>
+                                <th scope="col">Gender</th>
                                 <th scope="col">Genero</th>
                                 <th scope="col">Estado civil</th>
-                                <th scope="col">Número telefonico</th>
-                                <th scope="col">Número de emergencia</th>
-                                <th scope="col">Nombre de contacto para emergencias</th>
-                                <th scope="col">Correo gmail</th>
-                                <th scope="col">Nacionalidad</th>
-                                <th scope="col">Nivel educativo</th>
-                                <th scope="col">Cedula de identificación</th>
                                 <th scope="col">Dirección</th>
-                                <th scope="col">Fecha de contratacion</th>
-                                <th scope="col">Cargo</th>
+                                <th scope="col">Número telefonico de emergencia</th>
+                                <th scope="col">Nombre del contacto de emergencia</th>
+                                <th scope="col">Fecha de contratacion en la empresa</th>
+                                <th scope="col">Fecha de inicio en su puesto actual</th>
                                 <th scope="col">Departamento</th>
                             </tr>
                         </thead>
                         <tbody>
 
-@foreach ($employees as $employee)
+@foreach ($bosses as $boss)
                                 <tr>
                                     <td>
-                                        <span class="badge badge-pill badge-primary">{{ $employee->id }}</span>
+                                        <span class="badge badge-pill badge-primary">{{ $boss->id }}</span>
                                     </td>
-                                    <td>{{ $employee->name }}</td>
+                                    <td>{{ $employee->first_name }}</td>
                                     <td>{{ $employee->last_name }}</td>
                                     <td>{{ $employee->years_old }}</td>
                                     <td>{{ $employee->gender }}</td>
@@ -62,12 +62,12 @@
                                     <td>{{ $employee->departament }}</td>
 
                                     <td style="withe-space: nowrap; display: align-items; center;">
-                                        <a href="{{ route('employees.show', $employee) }}" class="btn btn-primary btn-sm" style="margin-right: 5px;">
+                                        <a href="{{ route('bosses.show', $boss) }}" class="btn btn-primary btn-sm" style="margin-right: 5px;">
                                            <i class="fas fa-eye"></i> Ver
-                                        <a href="{{ route('employees.edit', $employee) }}" class="btn btn-sm btn-primary" style="margin-right: 5px;">
+                                        <a href="{{ route('bosses.edit', $boss) }}" class="btn btn-sm btn-primary" style="margin-right: 5px;">
                                             <i class="fas fa-eye"></i> Editar
                                         </a>
-                                        <form action="{{ route('employees.destroy', $employee->id) }}" method="POST"
+                                        <form action="{{ route('bosses.destroy', $boss->id) }}" method="POST"
                                             style="display: inline-block; margin: 0; display: flex; align-items: center;"
                                             onsubmit="return confirm('¿Estás seguro de eliminar este empleado? Esta accion no se puede desahacer.');">
                                             @csrf
@@ -85,7 +85,7 @@
 
                 <div class="card-footer py-4">
                     <nav aria-label="..." class="d-flex flex-wrap justify-content-center justify-content-ld-center">
-                        {{ $employees->links() }}
+                        {{ $bosses->links() }}
                     </nav>
                 </div>
             </div>
