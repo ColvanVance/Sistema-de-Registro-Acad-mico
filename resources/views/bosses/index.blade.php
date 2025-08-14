@@ -1,5 +1,5 @@
 @extends('layouts.panel')
-@section('title', 'Empleados/Lista')
+@section('title', 'Jefes/Lista')
 
 @section('content')
     <div class="row">
@@ -92,4 +92,3 @@
         </div>
     </div>
 @endsection
-
