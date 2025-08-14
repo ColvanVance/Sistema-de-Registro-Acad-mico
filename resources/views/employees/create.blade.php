@@ -6,7 +6,7 @@
         <div class="card b-secondary shadow">
 
         <div class="card-header b-white border-0">
-            <div class="row algn-items-center">
+            <div class="row align-items-center">
                 <div class="col-8">
                     <h3 class="mb-0"><i class="fast fa-plus-circle"></i> Registrar Empleado</h3>
                 </div>
