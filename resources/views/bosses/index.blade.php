@@ -34,7 +34,9 @@
                                 <th scope="col">Nombre del contacto de emergencia</th>
                                 <th scope="col">Fecha de contratacion en la empresa</th>
                                 <th scope="col">Fecha de inicio en su puesto actual</th>
-                                <th scope="col">Departamento</th>
+                                <th scope="col">Departamento a cargo</th>
+                                <th scope="col">Personal a disposicion</th>
+                                <th scope="col">Responsabilidad presupuestaria</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -46,20 +48,22 @@
                                     </td>
                                     <td>{{ $employee->first_name }}</td>
                                     <td>{{ $employee->last_name }}</td>
+                                    <td>{{ $employee->identification }}</td>
+                                    <td>{{ $employee->number_phone }}</td>
+                                    <td>{{ $employee->mail }}</td>
+                                    <td>{{ $employee->nacionality }}</td>
                                     <td>{{ $employee->years_old }}</td>
                                     <td>{{ $employee->gender }}</td>
-                                    <td>{{ $employee->civil_status }}</td>
-                                    <td>{{ $employee->number_phone }}</td>
+                                    <td>{{ $employee->marital_states }}</td>
+                                    <td>{{ $employee->adress }}</td>
                                     <td>{{ $employee->emergency_contact_phone }}</td>
                                     <td>{{ $employee->emergency_contact_name }}</td>
-                                    <td>{{ $employee->email }}</td>
-                                    <td>{{ $employee->nacionality }}</td>
-                                    <td>{{ $employee->educative_level }}</td>
-                                    <td>{{ $employee->identification }}</td>
-                                    <td>{{ $employee->address }}</td>
                                     <td>{{ $employee->hire_date }}</td>
+                                    <td>{{ $employee->start_date_position }}</td>
                                     <td>{{ $employee->position }}</td>
-                                    <td>{{ $employee->departament }}</td>
+                                    <td>{{ $employee->departament_charge }}</td>
+                                    <td>{{ $employee->team_size }}</td>
+                                    <td>{{ $employee->budget_responsibility }}</td>
 
                                     <td style="withe-space: nowrap; display: align-items; center;">
                                         <a href="{{ route('bosses.show', $boss) }}" class="btn btn-primary btn-sm" style="margin-right: 5px;">
