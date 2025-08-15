@@ -37,3 +37,20 @@
             </div>
         </div>
     </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label for="academic_level">Nivel Educativo</label>
+                <select name="academic_level" id="academic_level" class="form-control">
+                    <option value="" disabled>Seleccione su Nivel Educativo</option>
+                    <option value="Bachiller" {{ old('academic_level', $charges->educative_level ?? '') == 'Bachiller' ? 'selected' : '' }}>Bachiller</option>
+                    <option value="Universitario" {{ old('academic_level', $charges->educative_level ?? '') == 'Universitario' ? 'selected' : '' }}>Universitario</option>
+                    <option value="Técnico" {{ old('academic_level', $charges->educative_level ?? '') == 'Técnico' ? 'selected' : '' }}>Técnico</option>
+                    <option value="Postgrado" {{ old('academic_level', $charges->educative_level ?? '') == 'Postgrado' ? 'selected' : '' }}>Postgrado</option>
+                    <option value="Doctorado" {{ old('academic_level', $charges->educative_level ?? '') == 'Doctorado' ? 'selected' : '' }}>Doctorado</option>
+                    <option value="Otro" {{ old('academic_level', $charges->educative_level ?? '') == 'Otro' ? 'selected' : '' }}>Otro</option>
+                </select>
+            </div>
+        </div>
+    </div>
