@@ -31,6 +31,11 @@ return new class extends Migration
             $table->string('departament_charge', 50);
             $table->integer('team_size');
             $table->decimal('budget_responsibility');
+            $table->string('educative_level', 50);
+            $table->string('work_experience', 500)->nullable();
+            $table->string('photo')->nullable();
+            $table->text('observations')->nullable();
+            $table->string('status', 10)->default('active');
             $table->timestamps();
         });
     }

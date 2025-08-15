@@ -3,16 +3,36 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 
 class Boss extends Model
 {
     protected $table = 'bosses';
 
     protected $fillable = [
-        'name',
-        'email',
-        'phone',
-        'department_id',
+        'first_name',
+        'last_name',
+        'identification',
+        'number_phone',
+        'mail',
+        'nacionality',
+        'years_old',
+        'gender',
+        'marital_states',
+        'adress',
+        'emergency_contact_phone',
+        'emergency_contact_name',
+        'hire_date',
+        'start_date_position',
+        'position',
+        'departament_charge',
+        'team_size',
+        'budget_responsibility',
+        'educative_level',
+        'work_experience',
+        'photo',
+        'observations',
+        'status',
     ];
 
     public function absences()
@@ -24,5 +44,4 @@ class Boss extends Model
     {
         return $this->hasMany(Departament::class);
     }
-
 }

@@ -220,3 +220,71 @@
             </div>
         </div>
     </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label for="educative_level">Nivel Educativo</label>
+                <select name="educative_level" id="educative_level" class="form-control">
+                    <option value="" disabled>Seleccione su Nivel Educativo</option>
+                    <option value="Primaria" {{ old('educative_level', $boss->educative_level ?? '') == 'Primaria' ? 'selected' : '' }}>Primaria</option>
+                    <option value="Bachiller" {{ old('educative_level', $boss->educative_level ?? '') == 'Bachiller' ? 'selected' : '' }}>Bachiller</option>
+                    <option value="Universitario" {{ old('educative_level', $boss->educative_level ?? '') == 'Universitario Rica' ? 'selected' : '' }}>Universitario</option>
+                    <option value="Técnico" {{ old('educative_level', $boss->educative_level ?? '') == 'Técnico' ? 'selected' : '' }}>Técnico</option>
+                    <option value="Postgrado" {{ old('educative_level', $boss->educative_level ?? '') == 'Postgrado' ? 'selected' : '' }}>Postgrado</option>
+                    <option value="Doctorado" {{ old('educative_level', $boss->educative_level ?? '') == 'Doctorado' ? 'selected' : '' }}>Doctorado</option>
+                    <option value="Otro" {{ old('educative_level', $boss->educative_level ?? '') == 'Otro' ? 'selected' : '' }}>Otro</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label class="form-control-label" for="work_experience">
+                <i class="fas fa-briefcase"></i> Experiencia laboral
+                </label>
+                <textarea id="work_experience" name="work_experience" class="form-control form-control-alternative"
+                    placeholder="Describir experiencia laboral del jefe">{{ old('work_experience', $boss->work_experience) }}</textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label class="form-control-label" for="photo">
+                <i class="fas fa-image"></i> Foto
+                </label>
+                <input type="file" id="photo" name="photo" class="form-control form-control-alternative">
+                @if(isset($boss->photo))
+                    <img src="{{ Storage::url($boss->photo) }}" alt="Foto del jefe" width="100" class="mt-2">
+                @endif
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label class="form-control-label" for="observations">
+                <i class="fas fa-sticky-note"></i> Observaciones
+                </label>
+                <textarea id="observations" name="observations" class="form-control form-control-alternative"
+                    placeholder="Agregar observaciones">{{ old('observations', $boss->observations) }}</textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label for="status">Estado</label>
+                <select name="status" id="status" class="form-control">
+                    <option value="active" {{ old('status', $boss->status ?? '') == 'active' ? 'selected' : '' }}>Activo</option>
+                    <option value="inactive" {{ old('status', $boss->status ?? '') == 'inactive' ? 'selected' : '' }}>Inactivo</option>
+                </select>
+            </div>
+        </div>
+    </div>

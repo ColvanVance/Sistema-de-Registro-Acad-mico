@@ -41,6 +41,11 @@ class BossRequest extends FormRequest
             'departament_charge' => 'required|string|max:50',
             'team_size' => 'required|integer',
             'budget_responsibility' => 'required|numeric',
+            'educative_level' => 'required|string|max:50',
+            'work_experience' => 'nullable|string|max:500',
+            'photo' => 'nullable|image|max:2048',
+            'observations' => 'nullable|string',
+            'status' => 'required|string|max:10|in:active,inactive',
         ];
     }
 
@@ -122,6 +127,24 @@ class BossRequest extends FormRequest
             'bogget_responsibility.required' => 'La responsabilidad presupuestaria es obligatoria.',
             'bogget_responsibility.numeric' => 'La responsabilidad presupuestaria debe ser un número.',
 
+            'educative_level.required' => 'El nivel educativo es obligatorio.',
+            'educative_level.string' => 'El nivel educativo debe contener solo caracteres.',
+            'educative_level.max' => 'El nivel educativo tiene un máximo de 50 caracteres.',
+
+            'work_experience.required' => 'La experiencia laboral es obligatoria.',
+            'work_experience.string' => 'La experiencia laboral debe contener solo caracteres.',
+            'work_experience.max' => 'La experiencia laboral tiene un máximo de 500 caracteres.',
+
+            'photo.image' => 'La foto debe ser una imagen válida.',
+            'photo.max' => 'La foto no puede exceder los 2 MB.',
+
+            'observations.string' => 'Las observaciones deben contener solo caracteres.',
+            'observations.max' => 'Las observaciones tienen un máximo de 500 caracteres.',
+
+            'status.required' => 'El estado es obligatorio.',
+            'status.string' => 'El estado debe contener solo caracteres.',
+            'status.max' => 'El estado tiene un máximo de 10 caracteres.',
+            'status.in' => 'El estado debe ser uno de los siguientes: active, inactive',
         ];
     }
 }

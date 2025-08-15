@@ -37,6 +37,11 @@
                                 <th scope="col">Departamento a cargo</th>
                                 <th scope="col">Personal a disposicion</th>
                                 <th scope="col">Responsabilidad presupuestaria</th>
+                                <th scope="col">Nivel educativo</th>
+                                <th scope="col">Experiencia laboral</th>
+                                <th scope="col">Foto</th>
+                                <th scope="col">Observaciones</th>
+                                <th scope="col">Estado</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -64,6 +69,23 @@
                                     <td>{{ $employee->departament_charge }}</td>
                                     <td>{{ $employee->team_size }}</td>
                                     <td>{{ $employee->budget_responsibility }}</td>
+                                    <td>{{ $employee->educative_level }}</td>
+                                    <td>{{ $employee->work_experience }}</td>
+                                    <td>
+                                        @if ($employee->photo)
+                                            <img src="{{ asset('storage/' . $employee->photo) }}" alt="Foto del empleado" width="50">
+                                        @else
+                                            N/A
+                                        @endif
+                                    </td>
+                                    <td>{{ $employee->observations }}</td>
+                                    <td>
+                                        @if ($employee->status === 'active')
+                                            <span class="badge badge-success">Activo</span>
+                                        @else
+                                            <span class="badge badge-danger">Inactivo</span>
+                                        @endif
+                                    </td>
 
                                     <td style="withe-space: nowrap; display: align-items; center;">
                                         <a href="{{ route('bosses.show', $boss) }}" class="btn btn-primary btn-sm" style="margin-right: 5px;">
