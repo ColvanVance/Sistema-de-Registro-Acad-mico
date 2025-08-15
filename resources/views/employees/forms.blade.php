@@ -41,12 +41,12 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="form-group">
-                <label class="form-control-label" for="gender">
-                <i class="fas fa-venus-mars"></i> Género
-                </label>
-                <input type="text" id="gender" name="gender" class="form-control form-control-alternative"
-                    placeholder="Ingresar género del empleado"
-                    value="{{ old('gender', $employee->gender) }}">
+                <label for="gender">Genero</label>
+                <select name="gender" id="gender" class="form-control">
+                    <option value="" disabled>Seleccione un Genero</option>
+                    <option value="Masculino" {{ old('gender', $employee->gender ?? '') == 'Masculino' ? 'selected' : '' }}>Masculino</option>
+                    <option value="Femenino" {{ old('gender', $employee->gender ?? '') == 'Femenino' ? 'selected' : '' }}>Femenino</option>
+                </select>
             </div>
         </div>
     </div>
@@ -54,12 +54,15 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="form-group">
-                <label class="form-control-label" for="civil_status">
-                <i class="fas fa-heart"></i> Estado civil
-                </label>
-                <input type="text" id="civil_status" name="civil_status" class="form-control form-control-alternative"
-                    placeholder="Ingresar estado civil del empleado"
-                    value="{{ old('civil_status', $employee->civil_status) }}">
+                <label for="marital_status">Estado Civil</label>
+                <select name="marital_status" id="marital_status" class="form-control">
+                    <option value="" disabled>Seleccione su Estado Civil</option>
+                    <option value="Soltero" {{ old('marital_status', $employee->marital_status ?? '') == 'Soltero' ? 'selected' : '' }}>Soltero</option>
+                    <option value="Casado" {{ old('marital_status', $employee->marital_status ?? '') == 'Casado' ? 'selected' : '' }}>Casado</option>
+                    <option value="Divorciado" {{ old('marital_status', $employee->marital_status ?? '') == 'Divorciado' ? 'selected' : '' }}>Divorciado</option>
+                    <option value="Viudo" {{ old('marital_status', $employee->marital_status ?? '') == 'Viudo' ? 'selected' : '' }}>Viudo</option>
+                    <option value="Unión Libre" {{ old('marital_status', $employee->marital_status ?? '') == 'Unión Libre' ? 'selected' : '' }}>
+                </select>
             </div>
         </div>
     </div>
@@ -121,12 +124,22 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="form-group">
-                <label class="form-control-label" for="nacionality">
-                <i class="fas fa-flag"></i> Nacionalidad
-                </label>
-                <input type="text" id="nacionality" name="nacionality" class="form-control form-control-alternative"
-                    placeholder="Ingresar nacionalidad del empleado"
-                    value="{{ old('nacionality', $employee->nacionality) }}">
+                <label for="nacionality">Nacionalidad</label>
+                <select name="nacionality" id="nacionality" class="form-control">
+                    <option value="" disabled>Seleccione un Genero</option>
+                    <option value="Nicaragua" {{ old('nacionality', $employee->nacionality ?? '') == 'Nicaragua' ? 'selected' : '' }}>Nicaragua</option>
+                    <option value="Panamá" {{ old('nacionality', $employee->nacionality ?? '') == 'Panamá' ? 'selected' : '' }}>Panamá</option>
+                    <option value="Costa Rica" {{ old('nacionality', $employee->nacionality ?? '') == 'Costa Rica' ? 'selected' : '' }}>Costa Rica</option>
+                    <option value="Honduras" {{ old('nacionality', $employee->nacionality ?? '') == 'Honduras' ? 'selected' : '' }}>Honduras</option>
+                    <option value="El Salvador" {{ old('nacionality', $employee->nacionality ?? '') == 'El Salvador' ? 'selected' : '' }}>El Salvador</option>
+                    <option value="Guatemala" {{ old('nacionality', $employee->nacionality ?? '') == 'Guatemala' ? 'selected' : '' }}>Guatemala</option>
+                    <option value="México" {{ old('nacionality', $employee->nacionality ?? '') == 'México' ? 'selected' : '' }}>México</option>
+                    <option value="Colombia" {{ old('nacionality', $employee->nacionality ?? '') == 'Colombia' ? 'selected : '' }}>Colombia</option>
+                    <option value="Venezuela" {{ old('nacionality', $employee->nacionality ?? '') == 'Venezuela' ? 'selected' : '' }}>Venezuela</option>
+                    <option value="Ecuador" {{ old('nacionality', $employee->nacionality ?? '') == 'Ecuador' ? 'selected' : '' }}>Ecuador</option>
+                    <option value="Estados Unidos" {{ old('nacionality', $employee->nacionality ?? '') == 'Estados Unidos' ? 'selected' : '' }}>Estados Unidos</option>
+                    <option value="España" {{ old('nacionality', $employee->nacionality ?? '') == 'España' ? 'selected' : '' }}>España</option>
+                </select>
             </div>
         </div>
     </div>
@@ -134,13 +147,17 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="form-group">
-                <label class="form-control-label" for="educative_level">
-                <i class="fas fa-graduation-cap"></i> Nivel educativo
-                </label>
-                <input type="text" id="educative_level" name="educative_level"
-                    class="form-control form-control-alternative"
-                    placeholder="Ingresar nivel educativo del empleado"
-                    value="{{ old('educative_level', $employee->educative_level) }}">
+                <label for="educative_level">Nivel Educativo</label>
+                <select name="educative_level" id="educative_level" class="form-control">
+                    <option value="" disabled>Seleccione su Nivel Educativo</option>
+                    <option value="Primaria" {{ old('educative_level', $employee->educative_level ?? '') == 'Primaria' ? 'selected' : '' }}>Primaria</option>
+                    <option value="Bachiller" {{ old('educative_level', $employee->educative_level ?? '') == 'Bachiller' ? 'selected' : '' }}>Bachiller</option>
+                    <option value="Universitario" {{ old('educative_level', $employee->educative_level ?? '') == 'Universitario Rica' ? 'selected' : '' }}>Universitario</option>
+                    <option value="Técnico" {{ old('educative_level', $employee->educative_level ?? '') == 'Técnico' ? 'selected' : '' }}>Técnico</option>
+                    <option value="Postgrado" {{ old('educative_level', $employee->educative_level ?? '') == 'Postgrado' ? 'selected' : '' }}>Postgrado</option>
+                    <option value="Doctorado" {{ old('educative_level', $employee->educative_level ?? '') == 'Doctorado' ? 'selected' : '' }}>Doctorado</option>
+                    <option value="Otro" {{ old('educative_level', $employee->educative_level ?? '') == 'Otro' ? 'selected' : '' }}>Otro</option>
+                </select>
             </div>
         </div>
     </div>
