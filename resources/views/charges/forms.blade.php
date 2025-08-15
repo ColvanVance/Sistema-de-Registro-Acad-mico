@@ -54,3 +54,41 @@
             </div>
         </div>
     </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label class="form-control-label" for="experience_work">
+                <i class="fas fa-user"></i> Experencia de trabajo
+                </label>
+                <input type="text" id="experience_work" name="experience_work" class="form-control form-control-alternative"
+                    placeholder="Ingresar su experencia de trabajo"
+                    value="{{ old('experience_work', $charges->experience_work) }}">
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label class="form-control-label" for="requeriments">
+                <i class="fas fa-user"></i> Requerimientos
+                </label>
+                <input type="text" id="requeriments" name="requeriments" class="form-control form-control-alternative"
+                    placeholder="Ingresar Requerimientos"
+                    value="{{ old('requeriments', $charges->requeriments) }}">
+            </div>
+        </div>
+    </div>
+
+    <hr class="my-4" />
+
+    <h6 class="heading-small text-muted mb-4">Guardar</h6>
+
+    <div class="pl-lg-4">
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">
+                <i class="fas fa-save"></i> Guardar cargo
+            </button>
+        </div>
+    </div>
