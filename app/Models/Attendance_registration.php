@@ -14,9 +14,9 @@ class Attendance_registration extends Model
         'time_exit',
         'hours_worked',
         'overtime',
-        'id_absences',
-        'id_charges',
-        'id_incidences'
+        'employees_id',
+        'charges_id',
+        'incidences_id'
     ];
 
     public function absences()

@@ -27,6 +27,10 @@ return new class extends Migration
             $table->foreign('charges_id')->references('id')->
             on('charges')->onDelete('cascade')->onUpdate('cascade');
 
+            $table->integer('incidences_id')->unsigned();
+            $table->foreign('incidences_id')->references('id')->
+            on('incidences')->onDelete('cascade')->onUpdate('cascade');
+
             $table->timestamps();
         });
     }

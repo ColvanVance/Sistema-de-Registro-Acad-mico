@@ -15,9 +15,9 @@ class Absence extends Model
         'Type',
         'Reasson',
         'Status',
-        'id_employees',
-        'id_charges',
-        'id_bosses'
+        'employees_id',
+        'attendance_registrations_id',
+        'bosses_id'
     ];
 
     public function employee()

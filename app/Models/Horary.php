@@ -9,9 +9,11 @@ class Horary extends Model
     protected $table = 'horaries';
 
     protected $fillable = [
-        'day',
-        'time_in',
-        'time_exit',
+        'expected_input',
+        'expected_exit',
+        'overtime',
+        'employees_id',
+        'departament_id',
     ];
 
     public function departament ()

@@ -28,7 +28,8 @@ class AbsenceRequest extends FormRequest
             'reason' => 'required|string|max:500',
             'status' => 'required|in:pendiente,aprobado,rechazado',
             'employee_id' => 'required|exists:employees,id',
-            'departament_id' => 'required|exists:departaments,id',
+            'attendance_registrations_id' => 'required|exists:attendance_registrations,id',
+            'bosses_id' => 'required|exists:bosses,id',
         ];
     }
 
@@ -56,8 +57,11 @@ class AbsenceRequest extends FormRequest
             'employee_id.required' => 'El nombre del empleado es obligatorio.',
             'employee_id.exists' => 'El empleado seleccionado no existe.',
 
-            'departament_id.required' => 'El nombre del departamento es obligatorio.',
-            'departament_id.exists' => 'El nombre del departamento seleccionado no existe.',
+            'attendance_registrations_id.required' => 'El nombre del departamento es obligatorio.',
+            'attendance_registrations_id.exists' => 'El nombre del departamento seleccionado no existe.',
+
+            'bosses_id.required' => 'El nombre del jefe es obligatorio.',
+            'bosses_id.exists' => 'El nombre del jefe seleccionado no existe.',
         ];
 
     }

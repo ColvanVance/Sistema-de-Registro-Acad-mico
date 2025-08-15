@@ -23,9 +23,13 @@ return new class extends Migration
             $table->foreign('employees_id')->references('id')->
             on('employees')->onDelete('cascade')->onUpdate('cascade');
 
-            $table->integer('departament_id')->unsigned();
-            $table->foreign('departament_id')->references('id')->
-            on('departament')->onDelete('cascade')->onUpdate('cascade');
+            $table->integer('attendance_registrations_id')->unsigned();
+            $table->foreign('attendance_registrations_id')->references('id')->
+            on('attendance_registrations')->onDelete('cascade')->onUpdate('cascade');
+
+            $table->integer('bosses_id')->unsigned();
+            $table->foreign('bosses_id')->references('id')->
+            on('bosses')->onDelete('cascade')->onUpdate('cascade');
 
             /**
              * Ingresar boton para exportar documento de justificacion.

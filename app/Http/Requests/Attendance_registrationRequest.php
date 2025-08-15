@@ -27,8 +27,9 @@ class Attendance_registrationRequest extends FormRequest
             'time_exit' => 'required|date_format:H:i',
             'hours_worked' => 'required|numeric|min:0',
             'overtime' => 'nullable|numeric',
-            'employee_id' => 'required|exists:employees,id',
-            'charge_id' => 'required|exists:charges,id',
+            'employees_id' => 'required|exists:employees,id',
+            'charges_id' => 'required|exists:charges,id',
+            'incidences_id' => 'required|exists:incidences,id'
         ];
     }
 
@@ -51,11 +52,14 @@ class Attendance_registrationRequest extends FormRequest
             'overtime.numeric' => 'El tiempo extra debe ser un número.',
             'overtime.nullable' => 'El tiempo extra es opcional.',
 
-            'employee_id.required' => 'El nombre del empleado es obligatorio.',
-            'employee_id.exists' => 'El empleado seleccionado no existe.',
+            'employees_id.required' => 'El nombre del empleado es obligatorio.',
+            'employees_id.exists' => 'El empleado seleccionado no existe.',
 
-            'charge_id.required' => 'El cargo es obligatorio.',
-            'charge_id.exists' => 'El cargo seleccionado no existe.',
+            'charges_id.required' => 'El cargo es obligatorio.',
+            'charges_id.exists' => 'El cargo seleccionado no existe.',
+
+            'incidences_id.nullable' => 'La incidencia es obligatoria.',
+            'incidences_id.exists' => 'La incidencia seleccionada no existe.',
         ];
     }
 }
