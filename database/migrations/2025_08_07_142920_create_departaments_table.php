@@ -20,9 +20,11 @@ return new class extends Migration
             $table->string('state', 30);
             $table->integer('capacity_staff');
 
+            $table->integer('employees_id')->unsigned();
             $table->foreign('employees_id')->references('id')->
             on('employees')->onDelete('cascade')->onUpdate('cascade');
 
+            $table->integer('bosses_id')->unsigned();
             $table->foreign('bosses_id')->references('id')->
             on('bosses')->onDelete('cascade')->onUpdate('cascade');
 

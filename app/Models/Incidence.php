@@ -27,11 +27,6 @@ class incidence extends Model
         return $this->belongsTo(Employee::class);
     }
 
-    public function departament()
-    {
-        return $this->belongsTo(Departament::class);
-    }
-
     public function boss()
     {
         return $this->belongsTo(Boss::class);
@@ -40,5 +35,10 @@ class incidence extends Model
     public function charge()
     {
         return $this->belongsTo(Charge::class);
+    }
+
+    public function attendance_registrations()
+    {
+        return $this->belongsTo(Attendance_registration::class);
     }
 }

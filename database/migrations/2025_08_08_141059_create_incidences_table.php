@@ -14,12 +14,15 @@ return new class extends Migration
         Schema::create('incidences', function (Blueprint $table) {
             $table->increments('id');
 
+            $table->integer('employees_id')->unsigned();
             $table->foreign('employees_id')->references('id')->
             on('employees')->onDelete('cascade')->onUpdate('cascade');
 
+            $table->integer('departament_id')->unsigned();
             $table->foreign('departament_id')->references('id')->
             on('departament')->onDelete('cascade')->onUpdate('cascade');
 
+            $table->integer('charges_id')->unsigned();
             $table->foreign('charges_id')->references('id')->
             on('charges')->onDelete('cascade')->onUpdate('cascade');
 
@@ -30,7 +33,7 @@ return new class extends Migration
             $table->string('generated_by', 100);
             $table->string('status', 15);
 
-
+            $table->integer('bosses_id')->unsigned();
             $table->foreign('bosses_id')->references('id')->
             on('bosses')->onDelete('cascade')->onUpdate('cascade');
 

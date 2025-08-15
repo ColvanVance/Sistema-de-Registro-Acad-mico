@@ -35,7 +35,7 @@ return new class extends Migration
             $table->string('work_experience', 500)->nullable();
             $table->string('photo')->nullable();
             $table->text('observations')->nullable();
-            $table->string('status', 10)->default('active');
+            $table->string('status', 20);
             $table->timestamps();
         });
     }

@@ -19,4 +19,9 @@ class Horary extends Model
         return $this->hasMany(Departament::class);
     }
 
+    public function bosses()
+    {
+        return $this->belongsTo(Boss::class);
+    }
+
 }

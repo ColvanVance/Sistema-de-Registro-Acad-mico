@@ -44,4 +44,9 @@ class Boss extends Model
     {
         return $this->hasMany(Departament::class);
     }
+
+    public function horaries()
+    {
+        return $this->hasMany(Horary::class);
+    }
 }

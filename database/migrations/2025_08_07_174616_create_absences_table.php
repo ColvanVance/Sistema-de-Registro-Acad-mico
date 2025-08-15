@@ -19,9 +19,11 @@ return new class extends Migration
             $table->text('reasson');
             $table->string('status', 15);
 
+            $table->integer('employees_id')->unsigned();
             $table->foreign('employees_id')->references('id')->
             on('employees')->onDelete('cascade')->onUpdate('cascade');
 
+            $table->integer('departament_id')->unsigned();
             $table->foreign('departament_id')->references('id')->
             on('departament')->onDelete('cascade')->onUpdate('cascade');
 

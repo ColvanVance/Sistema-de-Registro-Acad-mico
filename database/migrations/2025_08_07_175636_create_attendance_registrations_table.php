@@ -19,9 +19,11 @@ return new class extends Migration
             $table->time('hours_worked');
             $table->time('overtime');
 
+            $table->integer('employees_id')->unsigned();
             $table->foreign('employees_id')->references('id')->
             on('employees')->onDelete('cascade')->onUpdate('cascade');
 
+            $table->integer('chares_id')->unsigned();
             $table->foreign('charges_id')->references('id')->
             on('charges')->onDelete('cascade')->onUpdate('cascade');
 

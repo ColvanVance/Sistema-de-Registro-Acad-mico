@@ -15,6 +15,9 @@ class Absence extends Model
         'Type',
         'Reasson',
         'Status',
+        'id_employees',
+        'id_charges',
+        'id_bosses'
     ];
 
     public function employee()
@@ -22,9 +25,9 @@ class Absence extends Model
         return $this->belongsTo(Employee::class);
     }
 
-    public function departament()
+    public function charge()
     {
-        return $this->belongsTo(Departament::class);
+        return $this->belongsTo(Charge::class);
     }
 
     public function boss()
