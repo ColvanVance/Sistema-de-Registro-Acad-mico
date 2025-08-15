@@ -19,12 +19,6 @@ return new class extends Migration
             $table->text('experience_work');
             $table->text('requeriments');
 
-            $table->foreign('employees_id')->references('id')->
-            on('employees')->onDelete('cascade')->onUpdate('cascade');
-
-            $table->foreign('attendance_registrations_id')->references('id')->
-            on('attendance_registration')->onDelete('cascade')->onUpdate('cascade');
-
 
             /**
              * Incluir boton para ingresar pdf
