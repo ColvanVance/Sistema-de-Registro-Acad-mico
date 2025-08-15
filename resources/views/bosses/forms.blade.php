@@ -9,7 +9,7 @@
                 </label>
                 <input type="text" id="name" name="name" class="form-control form-control-alternative"
                     placeholder="Ingresar nombre del empleado"
-                    value="{{ old('name', $boss->name_first) }}">
+                    value="{{ old('name', $boss->first_name) }}">
             </div>
         </div>
     </div>
