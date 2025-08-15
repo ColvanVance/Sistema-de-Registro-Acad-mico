@@ -1,6 +1,7 @@
 <h6 class="heading-small text-muted mb-4">Información del Jefe</h6>
 
 <div class="pl-lg-4">
+
     <div class="row">
         <div class="col-lg-6">
             <div class="form-group">
@@ -171,7 +172,7 @@
 
     <div class="row">
         <div class="col-lg-6">
-            <div class="form-group
+            <div class="form-group">
                 <label class="form-control-label" for="position">
                 <i class="fas fa-briefcase"></i> Cargo a cargo
                 </label>
