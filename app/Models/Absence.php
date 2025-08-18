@@ -10,11 +10,11 @@ class Absence extends Model
 
     protected $fillable = [
         'employees_id',
-        'Date_start',
-        'Date_end',
-        'Type',
-        'Reasson',
-        'Status',
+        'date_start',
+        'date_end',
+        'type',
+        'reasson',
+        'status',
         'employees_id',
         'attendance_registrations_id',
         'bosses_id'
