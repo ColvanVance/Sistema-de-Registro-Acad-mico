@@ -83,6 +83,42 @@
         </div>
     </div>
 
+    <div class="col-lg-6">
+        <div class="form-group">
+            <label class="form-control-label" for="attendance_registration_id">
+                <i class="fas fa-solid fa-aligin-justify"></i> Registro de entradas
+            </label>
+            <select name="attendance_registration_id" id="attendance_registration_id" class="form-control form-control-alternative">
+                <option disabled selected> Seleccionar hora de entrada</option>
+                @foreach ($attendance_registrations_id as $attendance_registration_id)
+                    <option value="{{ $attendance_registration_id }}"
+                        {{ old('attendance_registration_id', $absence->attendance_registration_id ?? '' ) == $attendance_registration->id ? 'selected' : ''}}>
+                        {{ $attendance_registration->hours_worked }}
+                    </option>
+                @endforeach
+            </select>
+        </div>
+    </div>
+
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label class="form-control-label" for="boss_id">
+                    <i class="fas fa-solid fa-aligin-justify"></i> Registro de entradas
+                </label>
+                <select name="boss_id" id="boss_id" class="form-control form-control-alternative">
+                    <option disabled selected> Seleccionar jefe a cargo</option>
+                    @foreach ($bosses_id as $boss_id)
+                        <option value="{{ $boss_id }}"
+                            {{ old('boss_id', $absence->boss_id ?? '' ) == $boss_id->id ? 'selected' : ''}}>
+                            {{ $boss_id->hours_worked }}
+                        </option>
+                    @endforeach
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+
     <hr class="my-4" />
 
     <h6 class="heading-small text-muted mb-4">Guardar</h6>
@@ -94,4 +130,6 @@
             </button>
         </div>
     </div>
+
+
 

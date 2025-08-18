@@ -22,12 +22,12 @@ class AbsenceRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'employee_id' => 'required|exists:employees,id',
             'date_in' => 'required|date',
             'date_end' => 'required|date|after_or_equal:date_in',
             'type' => 'required|string|max:50',
             'reason' => 'required|string|max:500',
             'status' => 'required|in:pendiente,aprobado,rechazado',
-            'employee_id' => 'required|exists:employees,id',
             'attendance_registrations_id' => 'required|exists:attendance_registrations,id',
             'bosses_id' => 'required|exists:bosses,id',
         ];
