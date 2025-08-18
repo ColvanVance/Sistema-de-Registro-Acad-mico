@@ -19,7 +19,7 @@
             </div>
 
             <div class="card-body container-fluid">
-                <form action="{{ route('bosses.update', $boss->id) }}" method="POST">
+                <form action="{{ route('bosses.update', $bosses->id) }}" method="POST">
                     @csrf
                     @method('PUT')
 
