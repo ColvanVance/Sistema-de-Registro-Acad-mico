@@ -19,7 +19,7 @@
             </div>
 
             <div class="card-body">
-                <h6 class="heading-small text-muted mb-4">Información del jefe</h6>
+                <h6 class="heading-small text-muted mb-4">Información del cargo</h6>
                 <div class="pl-lg-4">
                     <div class="row">
                         <div class="col-lg-6">
@@ -27,7 +27,7 @@
                                 <label class="form-control-label" for="name_chargues">
                                 <i class="fas fa-user"></i> Nombre del cargo
                                 <label>
-                                <p> {{ $charge->name_chargues }}</p>
+                                <p> {{ $charges->name_chargues }}</p>
                             </div>
                         </div>
                     </div>
@@ -38,7 +38,7 @@
                                 <label class="form-control-label" for="type_charges">
                                 <i class="fas fa-user"></i> Tipo de cargo
                                 <label>
-                                <p> {{ $charge->type_charges }}</p>
+                                <p> {{ $charges->type_charges }}</p>
                             </div>
                         </div>
                     </div>
@@ -49,7 +49,7 @@
                                 <label class="form-control-label" for="academic_level">
                                 <i class="fas fa-user"></i> Nivel academico
                                 <label>
-                                <p> {{ $charge->academic_level }}</p>
+                                <p> {{ $charges->academic_level }}</p>
                             </div>
                         </div>
                     </div>
@@ -60,7 +60,7 @@
                                 <label class="form-control-label" for="experience_work">
                                 <i class="fas fa-user"></i> Experiencia de trabajo
                                 <label>
-                                <p> {{ $charge->experience_work }}</p>
+                                <p> {{ $charges->experience_work }}</p>
                             </div>
                         </div>
                     </div>
@@ -71,7 +71,7 @@
                                 <label class="form-control-label" for="requeriments">
                                 <i class="fas fa-user"></i> Requerimientos necesarios
                                 <label>
-                                <p> {{ $charge->requeriments }}</p>
+                                <p> {{ $charges->requeriments }}</p>
                             </div>
                         </div>
                     </div>
