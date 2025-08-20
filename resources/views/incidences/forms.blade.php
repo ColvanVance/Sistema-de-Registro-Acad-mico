@@ -28,7 +28,7 @@
             <select name="departament_id" id="departament_id" class="form-control form-control-alternative">
                 <option disabled selected> Seleccionar departamento</option>
                 @foreach ($departaments_id as $departament_id)
-                    <option value="{{ $attendance_registration_id }}"
+                    <option value="{{ $departament->id }}"
                         {{ old('attendance_registration_id', $absence->attendance_registration_id ?? '' ) == $attendance_registration->id ? 'selected' : ''}}>
                         {{ $attendance_registration->hours_worked }}
                     </option>

@@ -91,7 +91,7 @@
             <select name="attendance_registration_id" id="attendance_registration_id" class="form-control form-control-alternative">
                 <option disabled selected> Seleccionar hora de entrada</option>
                 @foreach ($attendance_registrations_id as $attendance_registration_id)
-                    <option value="{{ $attendance_registration_id }}"
+                    <option value="{{ $attendance_registration->id }}"
                         {{ old('attendance_registration_id', $absence->attendance_registration_id ?? '' ) == $attendance_registration->id ? 'selected' : ''}}>
                         {{ $attendance_registration->hours_worked }}
                     </option>
