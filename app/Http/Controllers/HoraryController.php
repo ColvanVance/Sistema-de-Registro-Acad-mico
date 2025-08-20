@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Horary;
 use App\Models\Departament;
 use App\Http\Requests\HoraryRequest;
+use App\Models\Employee;
+use App\Models\Boss;
 
 class HoraryController extends Controller
 {
@@ -26,8 +28,10 @@ class HoraryController extends Controller
         $horaries = new Horary();
 
         $departaments = Departament::all();
+        $employees = Employee::all();
+        $bosses = Boss::all();
 
-        return view('horaries.create', compact('horaries', 'departaments'));
+        return view('horaries.create', compact('horaries', 'departaments', 'employees', 'bosses'));
     }
 
     /**
@@ -59,8 +63,10 @@ class HoraryController extends Controller
         $horaries = Horary::find($id);
 
         $departaments = Departament::all();
+        $employees = Employee::all();
+        $bosses = Boss::all();
 
-        return view('horaries.edit', compact('horaries', 'departaments'));
+        return view('horaries.edit', compact('horaries', 'departaments', 'employees', 'bosses'));
     }
 
     /**

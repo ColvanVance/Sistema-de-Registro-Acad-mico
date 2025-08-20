@@ -9,10 +9,10 @@ class Horary extends Model
     protected $table = 'horaries';
 
     protected $fillable = [
+        'employees_id',
         'expected_input',
         'expected_exit',
         'overtime',
-        'employees_id',
         'departament_id',
     ];
 
@@ -21,7 +21,12 @@ class Horary extends Model
         return $this->hasMany(Departament::class);
     }
 
-    public function bosses()
+    public function employees ()
+    {
+        return $this->belongsTo(Employee::class);
+    }
+
+        public function bosses()
     {
         return $this->belongsTo(Boss::class);
     }

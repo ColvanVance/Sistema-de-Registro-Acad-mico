@@ -38,4 +38,9 @@ public function incidence()
         return $this->hasMany(Incidence::class);
     }
 
+public function horaries()
+    {
+        return $this->hasMany(Horary::class);
+    }
+
 }
