@@ -25,10 +25,22 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="form-group">
-                            <label class="form-control-label" for="date_end">
-                                <i class="fas fa-user"></i>Fecha de la ausencia
+                            <label for="employees_id" class="form-control-label">
+                                <i class="fas fa-user">Nombre del empleado</i>
                             </label>
-                            <p>{{ $incidences->name_departament }}</p>
+                            <p>{{ $incidences->employee->name }}</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <label class="form-control-label" for="creation_date">
+                                <i class="fas fa-user"></i>Fecha de creación
+                            </label>
+                            <p>{{ $incidences->creation_date }}</p>
                         </div>
                     </div>
                 </div>
@@ -36,23 +48,29 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="form-group">
-                            <label class="form-control-label" for="location">
-                                <i class="fas fa-user"></i>Locacion del departamento
+                            <label class="form-control-label" for="reasson">
+                                <i class="fas fa-user"></i>Razón de la incidencia
                             </label>
-                            <p>{{ $departaments->location }}</p>
+                            <p>{{ $incidences->reasson }}</p>
                         </div>
                     </div>
                 </div>
 
-                   <div class="row">
+                <div class="row">
                     <div class="col-lg-12">
                         <div class="form-group">
-                            <label class="form-control-label" for="description">
-                                <i class="fas fa-user"></i>Descripcion del departamento
+                            <label class="form-control-label" for="generated_by">
+                                <i class="fas fa-user"></i>Generado por...
                             </label>
-                            <p>{{ $departaments->description }}</p>
+                            <p>{{ $incidences->generated_by }}</p>
                         </div>
                     </div>
                 </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
 
 @endsection
