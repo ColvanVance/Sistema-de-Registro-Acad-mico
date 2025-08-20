@@ -28,6 +28,12 @@ return new class extends Migration
             $table->foreign('bosses_id')->references('id')->
             on('bosses')->onDelete('cascade')->onUpdate('cascade');
 
+            $table->integer('charges_id')->unsigned();
+            $table->foreign('charges_id')->references('id')->
+            on('charges')->onDelete('cascade')->onUpdate('cascade');
+
+
+
 
             $table->timestamps();
         });
