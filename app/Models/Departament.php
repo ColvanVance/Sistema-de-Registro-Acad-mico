@@ -9,14 +9,15 @@ class Departament extends Model
     protected $table = 'departaments';
 
     protected $fillable = [
+        'employees_id',
         'name_departament',
         'location',
         'description',
         'responsible_employee',
         'state',
         'capacity_staff',
-        'employees_id',
         'bosses_id',
+        'charges_id',
     ];
 
     public function employee()

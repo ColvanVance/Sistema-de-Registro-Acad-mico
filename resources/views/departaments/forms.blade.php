@@ -94,6 +94,23 @@
                 </select>
             </div>
         </div>
+
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label class="form-control-label" for="charges_id">
+                    <i class="fas fa-solid fa-aligin-justify"></i>Cargo designado
+                </label>
+                <select name="charge_id" id="charge_id" class="form-control form-control-alternative">
+                    <option disabled selected> Seleccionar cargo</option>
+                    @foreach ($charges_id as $charge_id)
+                        <option value="{{ $charge_id }}"
+                            {{ old('charge_id', $charge->charge_id ?? '' ) == $charge_id->id ? 'selected' : ''}}>
+                            {{ $charge_id->name_chargues }}
+                        </option>
+                    @endforeach
+                </select>
+            </div>
+        </div>
     </div>
 </div>
 

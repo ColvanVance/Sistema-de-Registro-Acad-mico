@@ -22,6 +22,7 @@ class DepartamentRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'employees_id' => 'required',
             'name_departament' => 'required|string|max:80',
             'location' => 'required|string|max:100',
             'description' => 'required|string|max:500',
@@ -29,7 +30,6 @@ class DepartamentRequest extends FormRequest
             'state' => 'required|string|max:30',
             'capacity_staff' => 'required|integer',
 
-            'employees_id' => 'required',
             'bosses_id' => 'required',
             'charges_id' => 'required',
         ];
@@ -38,6 +38,8 @@ class DepartamentRequest extends FormRequest
     public function messages(): array
     {
         return [
+            'employees_id.required' => 'El empleado asignado es obligatorio.',
+
             'name_departament.required' => 'El nombre del departamento es obligatorio.',
             'name_departament.string' => 'El nombre del departamento debe contener solo caracteres.',
             'name_departament.max' => 'El nombre del departamento tiene un máximo de 80 caracteres.',
@@ -60,8 +62,6 @@ class DepartamentRequest extends FormRequest
 
             'capacity_staff.required' => 'La capacidad de personal a cargo es obligatoria.',
             'capacity_staff.integer' => 'La capacidad de personal a cargo debe ser un número entero.',
-
-            'employees_id.required' => 'El empleado asignado es obligatorio.',
 
             'bosses_id.required' => 'El jefe asignado es obligatorio.',
 
