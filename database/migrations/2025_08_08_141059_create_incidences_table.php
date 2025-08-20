@@ -26,6 +26,7 @@ return new class extends Migration
             $table->foreign('charges_id')->references('id')->
             on('charges')->onDelete('cascade')->onUpdate('cascade');
 
+            $table->string('creation_date');
             $table->string('type', 80);
             $table->text('reasson', 500);
             $table->string('penalty', 255);

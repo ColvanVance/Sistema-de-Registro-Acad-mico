@@ -51,6 +51,10 @@ class IncidenceRequest extends FormRequest
             'creation_date.required' => 'La fecha de creación es obligatoria.',
             'creation_date.date' => 'La fecha de creación debe ser una fecha válida.',
 
+            'name_incidence.required' => 'El nombre de la incidencia es requerido.',
+            'name_incidence.string' => 'El nombre de incidencia debe ser una cadena de caracteres.',
+            'name_incidence.min' => 'El nombre de incidencia debe contener minimo 5 caracteres.',
+
             'type.required' => 'El tipo de incidencia es obligatorio.',
             'type.string' => 'El tipo de incidencia debe ser una cadena de caracteres.',
             'type.max' => 'El tipo de incidencia no puede exceder los 50 caracteres.',
