@@ -18,8 +18,8 @@ return new class extends Migration
             $table->foreign('employees_id')->references('id')->
             on('employees')->onDelete('cascade')->onUpdate('cascade');
 
-            $table->integer('departament_id')->unsigned();
-            $table->foreign('departament_id')->references('id')->
+            $table->integer('departaments_id')->unsigned();
+            $table->foreign('departaments_id')->references('id')->
             on('departament')->onDelete('cascade')->onUpdate('cascade');
 
             $table->integer('charges_id')->unsigned();
