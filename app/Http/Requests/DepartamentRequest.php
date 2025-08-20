@@ -29,8 +29,9 @@ class DepartamentRequest extends FormRequest
             'state' => 'required|string|max:30',
             'capacity_staff' => 'required|integer',
 
-            'employees_id' => 'required|exists:employees,id',
-            'bosses_id' => 'required|exists:bosses,id',
+            'employees_id' => 'required',
+            'bosses_id' => 'required',
+            'charges_id' => 'required',
         ];
     }
 
@@ -61,12 +62,10 @@ class DepartamentRequest extends FormRequest
             'capacity_staff.integer' => 'La capacidad de personal a cargo debe ser un número entero.',
 
             'employees_id.required' => 'El empleado asignado es obligatorio.',
-            'employees_id.integer' => 'El empleado asignado debe ser un número entero.',
-            'employees_id.exists' => 'El empleado seleccionado no existe.',
 
             'bosses_id.required' => 'El jefe asignado es obligatorio.',
-            'bosses_id.integer' => 'El jefe asignado debe ser un número entero.',
-            'bosses_id.exists' => 'El jefe seleccionado no existe.',
+
+            'charges_id.required' => 'El cargo asignado es obligatorio.',
         ];
     }
 }
