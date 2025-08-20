@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Attendance_registration;
-use App\Models\Absence;
+use App\Models\Employee;
 use App\Models\Charge;
 use App\Models\Incidence;
 use App\Http\Requests\Attendance_registrationRequest;
@@ -27,10 +27,11 @@ class Attendance_registrationController extends Controller
     {
         $attendance_registrarions = new Attendance_registration();
 
+        $employees = Employee::all();
         $charges = Charge::all();
-        $absences = Absence::all();
+        $incidences = Incidence::all();
 
-        return view('attendance_registrarions.create', compact('attendance_registrarions', 'charges', 'absences'));
+        return view('attendance_registrarions.create', compact('attendance_registrarions', 'employees', 'charges', 'incidences'));
     }
 
     /**
@@ -61,10 +62,11 @@ class Attendance_registrationController extends Controller
     {
         $attendance_registrarions = Attendance_registration::find($id);
 
+        $employees = Employee::all();
         $charges = Charge::all();
-        $absences = Absence::all();
+        $incidences = Incidence::all();
 
-        return view('attendance_registrarions.edit', compact('attendance_registrarions', 'charges', 'absences'));
+        return view('attendance_registrarions.edit', compact('attendance_registrarions', 'employees', 'charges', 'incidences'));
     }
 
     /**

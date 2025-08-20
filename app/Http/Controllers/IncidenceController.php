@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Incidence;
 use App\Models\Employee;
+use App\Models\Departament;
 use App\Models\Charge;
-use App\Models\Attendance_registration;
+use App\Models\Boss;
 use App\Http\Requests\IncidenceRequest;
 
 class IncidenceController extends Controller
@@ -28,10 +29,11 @@ class IncidenceController extends Controller
         $incidences = new Incidence();
 
         $employees = Employee::all();
+        $departaments = Departament::all();
         $charges = Charge::all();
-        $attendance_registrations = Attendance_registration::all();
+        $attendance_registrations = Boss::all();
 
-        return view('incidences.create', compact('incidences', 'employees', 'charges', 'attendance_registrations'));
+        return view('incidences.create', compact('incidences', 'employees', 'departaments', 'chages', 'bosses'));
     }
 
     /**
@@ -76,10 +78,11 @@ class IncidenceController extends Controller
         }
 
         $employees = Employee::all();
+        $departaments = Departament::all();
         $charges = Charge::all();
-        $attendance_registrations = Attendance_registration::all();
+        $attendance_registrations = Boss::all();
 
-        return view('incidences.edit', compact('incidences', 'employees', 'charges', 'attendance_registrations'));
+        return view('incidences.edit', compact('incidences', 'employees', 'departaments', 'chages', 'bosses'));
     }
 
     /**

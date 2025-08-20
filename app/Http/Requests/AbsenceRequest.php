@@ -36,6 +36,9 @@ class AbsenceRequest extends FormRequest
     public function messages(): array
     {
         return [
+            'employee_id.required' => 'El nombre del empleado es obligatorio.',
+            'employee_id.exists' => 'El empleado seleccionado no existe.',
+            
             'date_in.required' => 'La fecha de inicio es obligatoria.',
             'date_in.date' => 'La fecha de inicio debe ser una fecha válida.',
 
@@ -53,9 +56,6 @@ class AbsenceRequest extends FormRequest
 
             'status.required' => 'El estado es obligatorio.',
             'status.in' => 'El estado debe ser uno de los siguientes: pendiente, aprobado, rechazado.',
-
-            'employee_id.required' => 'El nombre del empleado es obligatorio.',
-            'employee_id.exists' => 'El empleado seleccionado no existe.',
 
             'attendance_registrations_id.required' => 'El nombre del departamento es obligatorio.',
             'attendance_registrations_id.exists' => 'El nombre del departamento seleccionado no existe.',

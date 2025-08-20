@@ -18,22 +18,27 @@
                     <table class="table align-items-center table-flush">
                         <thead class="thead-light">
                             <tr>
+                                <th scope="col"><i class="fa-solid fa-circle-user"> Nombre del empleado</i></th>
                                 <th scope="col"><i class="fa-solid fa-circle-user"> Fecha de creacion</i></th>
                                 <th scope="col"><i class="fas-solid fa-"></i> Fecha de la ausencia</th>
                                 <th scope="col"><i class="fa-solid fa-"></i> Tipo de ausencia</th>
                                 <th scope="col"><i class="fas-solid fa-hastag"></i> Razon de la ausencia</th>
                                 <th scope="col"><i class="fa-solid fa-calendar-days"></i> Estado de la ausencia</th>
+                                <th scope="col"><i class="fa-solid fa-calendar-days"></i> Registro de horas laborales</th>
+                                <th scope="col"><i class="fa-solid fa-calendar-days"></i> Nombre del jefe a cargo</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($absences as $absence)
                                 <tr>
-
+                                    <td> {{ $absence->employee->name }} </td>
                                     <td> {{ $absence->date_start }} </td>
                                     <td> {{ $absence->date_end }} </td>
                                     <td> {{ $absence->type }} </td>
                                     <td> {{ $absence->reasson }} </td>
                                     <td> {{ $absence->status }} </td>
+                                    <td> {{ $absence->attendance_registration->hours_worked}} </td>
+                                    <td> {{ $absence->boss->first_name}} </td>
 
 
                                     <td style="white-space: nowrap; display: flex; align-items: center;">
