@@ -1,5 +1,5 @@
 @extends('layouts.panel')
-@section('title','Departamento/Show')
+@section('title','Incidencia/Show')
 
 @section('content')
     <div class="col-x1-12 order-x1-1">
@@ -8,10 +8,10 @@
             <div class="card-header bg-white border-0">
                <div class="row align-items-center">
                     <div class="col-8">
-                        <h3 class="mb-0"><i class="fas fa_newspaper"></i>Ver Departamento</h3>
+                        <h3 class="mb-0"><i class="fas fa_newspaper"></i>Ver Incidencia</h3>
                     </div>
                     <div class="col-4 text-right">
-                            <a href="{{ route('departaments.index')}}" class= "btn btn-sm btn-primary">
+                            <a href="{{ route('incidences.index')}}" class= "btn btn-sm btn-primary">
                                 <i class="fas fa-list"></i> Volver
                             </a>
                     </div>
@@ -19,7 +19,7 @@
             </div>
 
         <div class="card-body">
-            <h6 class="heading-small text-muted mb-4">Información del Departamento</h6>
+            <h6 class="heading-small text-muted mb-4">Información de la Incidencia</h6>
             <div class="pl-lg-4">
 
                 <div class="row">
@@ -28,7 +28,7 @@
                             <label class="form-control-label" for="date_end">
                                 <i class="fas fa-user"></i>Fecha de la ausencia
                             </label>
-                            <p>{{ $departaments->name_departament }}</p>
+                            <p>{{ $incidences->name_departament }}</p>
                         </div>
                     </div>
                 </div>
