@@ -27,7 +27,7 @@
                                 <label class="form-control-label" for="name">
                                 <i class="fas fa-user"></i> Nombre Completo
                                 <label>
-                                <p> {{ $boss->first_name }} {{ $boss->last_name }} </p>
+                                <p> {{ $boss->first_name }} </p>
                             </div>
                         </div>
                     </div>
