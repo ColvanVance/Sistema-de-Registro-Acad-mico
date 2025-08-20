@@ -1,8 +1,8 @@
 <h6 class="heading-small text-muted mb-4">Información de departamento</h6>
 
 <div class="pl-lg-4">
-    <div class="row">
 
+    <div class="row">
         <div class="col-lg-6">
             <div class="form-group">
                <label class="form-control-label" for="employees_id">
@@ -19,6 +19,7 @@
                </select>
             </div>
         </div>
+    </div>
 
 
     <div class="row">
