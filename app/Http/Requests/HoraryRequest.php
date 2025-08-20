@@ -22,11 +22,11 @@ class HoraryRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'employees_id' => 'required|exists:employees,id',
             'expected_input' => 'required|date_format:H:i',
             'expected_exit' => 'required|date_format:H:i',
             'over_time' => 'nullable|time',
 
-            'employees_id' => 'required|exists:employees,id',
             'departaments_id' => 'required|exists:departaments,id',
             'bosses_id' => 'required|exists:bosses,id'
         ];

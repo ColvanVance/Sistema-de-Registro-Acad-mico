@@ -63,8 +63,7 @@
                 <label class="form-control-label" for="creation_date">Fecha de creacion de la incidencia</label>
                 <input type="date" id="creation_date" name="creation_date" class="form-control form-control-alternative"
                 placeholder="Ingresar fecha de creacion de la incidencia"
-                value="{{ old('creation_date', $incidences->creation_date)}}">
-            </select>
+                value="{{ old('creation_date', isset($incidences->creation_date)) ? $incidences->creation_date->format(y-m-d) : '' }}">
             </div>
         </div>
     </div>
