@@ -23,8 +23,8 @@ class HoraryRequest extends FormRequest
     {
         return [
             'employees_id' => 'required|exists:employees,id',
-            'expected_input' => 'required|date_format:H:i',
-            'expected_exit' => 'required|date_format:H:i',
+            'expected_input' => 'required|time',
+            'expected_exit' => 'required|time',
             'over_time' => 'nullable|time',
 
             'departaments_id' => 'required|exists:departaments,id',
