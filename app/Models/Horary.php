@@ -13,7 +13,8 @@ class Horary extends Model
         'expected_input',
         'expected_exit',
         'overtime',
-        'departament_id',
+        'departaments_id',
+        'bosses_id'
     ];
 
     public function departament ()
