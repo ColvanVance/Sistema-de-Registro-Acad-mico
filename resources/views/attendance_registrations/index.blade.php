@@ -1,5 +1,5 @@
 @extends('layouts.panel')
-@section('title', 'Horarios')
+@section('title', 'Registro de asistencia')
 
 @section('content')
     <div class="row">
@@ -7,9 +7,9 @@
             <div class="card shadow">
                 <div class="card-header border-0">
                     <div class="d-flex justify-content-between align-items-center">
-                        <h3 class="mb-0">Horarios</h3>
-                        <a href="{{ route('horaries.create') }}" class="btn btn-primary">
-                            <i class="fas fa-plus"></i> Nuevo horario
+                        <h3 class="mb-0">Registro</h3>
+                        <a href="{{ route('attendance_registrations.create') }}" class="btn btn-primary">
+                            <i class="fas fa-plus"></i> Nuevo registro
                         </a>
                     </div>
                 </div>
@@ -27,15 +27,17 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($horaries as $horary)
+                            @foreach ($attendance_registrations as $attendance_registration)
                                 <tr>
 
-                                    <td> {{ $horary->employees->name }} </td>
-                                    <td> {{ $horary->expected_input }} </td>
-                                    <td> {{ $horary->expected_exit }} </td>
-                                    <td> {{ $horary->over_time }} </td>
-                                    <td> {{ $horary->departaments->name_departament }} </td>
-                                    <td> {{ $horary->bosses->first_name }} </td>
+                                    <td> {{ $attendance_registration->creation_date }} </td>
+                                    <td> {{ $attendance_registration->time_in }} </td>
+                                    <td> {{ $attendance_registration->time_exit }} </td>
+                                    <td> {{ $attendance_registration->hours_worked }} </td>
+                                    <td> {{ $attendance_registration->overtime }} </td>
+                                    <td> {{ $attendance_registration->employee->name }} </td>
+                                    <td> {{ $attendance_registration->departaments->name_departament }} </td>
+                                    <td> {{ $attendance_registration->bosses->first_name }} </td>
 
 
                                     <td style="white-space: nowrap; display: flex; align-items: center;">
@@ -73,3 +75,4 @@
         </div>
     </div>
 @endsection
+
